@@ -1,0 +1,39 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.nav-underline {
+  @apply relative cursor-pointer;
+}
+
+.nav-underline::after {
+  @apply content-[''] bg-secondary absolute h-[3px] w-[0%] left-0 -bottom-[0px] rounded-full duration-300;
+}
+
+.nav-underline:hover::after {
+  @apply w-[100%];
+}
+
+.nav-underline span::after {
+  @apply content-['>'] absolute top-0 left-[-20px] duration-500 opacity-0;
+}
+
+.nav-underline span:hover::after {
+  @apply opacity-100 left-[-18px];
+}
+
+.scrollbar::-webkit-scrollbar { 
+ @apply w-1
+}
+
+.scrollbar::-webkit-scrollbar-track {
+  @apply rounded-full bg-white 
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-blue-600 w-3
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+  @apply bg-red-400
+}
